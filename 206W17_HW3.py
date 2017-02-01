@@ -2,6 +2,7 @@ import unittest
 import re
 
 ## SI 206 - W17 - HW3
+## David Nguyen (djnguyen)
 ## COMMENT WITH:
 ## Your section day/time: Thursday 3-4 PM
 ## Any names of people you worked with on this assignment:
@@ -20,7 +21,9 @@ import re
 
 ## Write code to define your parse_counted_words function here.
 
+def parse_counted_words(str_imp):
 
+    break;
 
 
 ## PART 2: 200 points
