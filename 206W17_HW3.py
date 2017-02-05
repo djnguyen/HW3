@@ -5,7 +5,7 @@ import re
 ## David Nguyen (djnguyen)
 ## COMMENT WITH:
 ## Your section day/time: Thursday 3-4 PM
-## Any names of people you worked with on this assignment:
+## Any names of people you worked with on this assignment: N/A
 
 #####################
 
@@ -31,7 +31,6 @@ def parse_counted_words(input_string):
     else:
         return None
     
-
 ## PART 2: 200 points
 
 ## We have provided a text file computer_paths.txt. It's not incredibly long -- you can scan through it, but do NOT hard code your answers! Each line contains 1 filesystem path.
@@ -50,11 +49,8 @@ python_course_list = re.findall("SI206/[a-zA-Z0-9]*.[A-Za-z0-9]*\.*py", processe
 python_course_paths = len(python_course_list)
 
 ## (d) Write Python code to determine how many of these paths describe a Microsoft file (a file that EITHER ends with .docx OR .xlsx, but nothing else counts) where the file name ends in a digit. Save that total in the variable microsoft_files_num.
-
-
-
-
-
+microsoft_file_list = re.findall("[0-9]\.(docx|xlsx)", processed_file)
+microsoft_files_num = len(microsoft_file_list)
 
 ## We have provided unit tests in this file. To earn the full 500 points, you'll need to pass all of the tests and will need to have followed the instructions.
 ## Each class of the tests represents one "part" of the homework, and the points for each part are divided approx. equally between each of the tests.
