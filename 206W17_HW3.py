@@ -25,9 +25,9 @@ def parse_counted_words(input_string):
     parsed_list = re.findall("([0-9]+) (\W?[a-zA-z]*)", input_string)
 
     if len(parsed_list) > 0:
-        if (' ' not in parsed_list[-1]): #passing test 5 where ' ' is passed 
+        if (' ' not in parsed_list[-1]): # passing test 5 where ' ' is passed 
             return parsed_list[-1]
-
+    
     else:
         return None
     
@@ -38,12 +38,13 @@ input_file = open("computer_paths.txt", 'r')
 processed_file = input_file.read()
 
 ## (a) Write Python code to determine how many of these paths identify FILES, not directories. Save that number in the variable file_paths_num.
-file_list = re.findall("\.\w+", processed_file)
-file_paths_num = len(file_list)
+file_paths_list = re.findall("\.\w+", processed_file)
+file_paths_num = len(file_paths_list)
 
 ## (b) Write Python code to determine how many of these paths are FULL paths, not relative paths. Save that number in the variable full_paths_num.
 full_paths_list = re.findall("(\/Users|~)", processed_file)
 full_paths_num = len(full_paths_list)
+
 ## (c) Write Python code to determine how many of these paths describe a Python file saved inside a folder called SI206. Save that number in the variable python_course_paths.
 python_course_list = re.findall("SI206/[a-zA-Z0-9]*.[A-Za-z0-9]*\.*py", processed_file)
 python_course_paths = len(python_course_list)
