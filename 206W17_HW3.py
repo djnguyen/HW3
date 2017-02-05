@@ -21,14 +21,20 @@ import re
 
 ## Write code to define your parse_counted_words function here.
 
-def parse_counted_words(str_imp):
+def parse_counted_words(input_string):
+    parsed_list = re.findall("([0-9]+) (\W?[a-zA-z]*)", input_string)
 
-    break;
+    if len(parsed_list) > 0:
+        return parsed_list[-1]
 
+    else:
+        return None
+    
 
 ## PART 2: 200 points
 
 ## We have provided a text file computer_paths.txt. It's not incredibly long -- you can scan through it, but do NOT hard code your answers! Each line contains 1 filesystem path.
+
 
 ## (a) Write Python code to determine how many of these paths identify FILES, not directories. Save that number in the variable file_paths_num.
 
