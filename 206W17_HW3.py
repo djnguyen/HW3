@@ -25,7 +25,8 @@ def parse_counted_words(input_string):
     parsed_list = re.findall("([0-9]+) (\W?[a-zA-z]*)", input_string)
 
     if len(parsed_list) > 0:
-        return parsed_list[-1]
+        if (' ' not in parsed_list[-1]): #passing test 5 where ' ' is passed 
+            return parsed_list[-1]
 
     else:
         return None
